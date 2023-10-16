@@ -21,8 +21,8 @@ print(g_loc)
 n_tot = 200
 # solps_psi = 1.09145489
 solps_psi = 1.1
-p0 = [0.97, 0.6, 0.01, -5, 3/14]
-p1 = [0.95, 0.2, 0.02, -5, 6/7]
+p0 = [0.97, 0.6, 0.01, 0.05, 3/14]
+p1 = [0.95, 0.2, 0.02, 0.01, 6/7]
 
 if __name__ == '__main__':
     mast_dat_dict = tl.read_mastfile(g_loc[-1])
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     tanh_ne_fit = tl.tanh(x_model, popt_ne[0], popt_ne[1], popt_ne[2], popt_ne[3], popt_ne[4])
     tanh_te_fit = tl.tanh(x_model, popt_te[0], popt_te[1], popt_te[2], popt_te[3], popt_te[4])
     
-    shift = 0.006
+    shift = 0.002
     psi_sh = psi + shift
     
     sh_opt_ne, sh_cov_ne = curve_fit(tl.tanh, psi_sh, ne, p0)
