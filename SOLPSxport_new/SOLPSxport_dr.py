@@ -86,7 +86,7 @@ plt.rcParams.update({'mathtext.default': 'regular'})
 def main(gfile_loc = None, new_filename='b2.transport.inputfile_new',
          profiles_fileloc=None, shotnum=None, ptimeid=None, prunid=None,
          nefit='tanh', tefit='tanh', ncfit='spl', chii_eq_chie = False,  # ti_eq_te = False,
-         Dn_min=0.001, vrc_mag=0.0, Dn_max= 8,
+         Dn_min=0.001, vrc_mag=0.0, Dn_max= 15,
          chie_use_grad = False, chii_use_grad = False, new_b2xportparams = True,
          chie_min = 0.01, chii_min = 0.01, chie_max = 18, chii_max = 10,
          reduce_Ti_fileloc = None, update_old_last10s = False,
